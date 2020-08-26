@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de programação
+        'use strict'
+
+        // Declaração de variáveis em JS
+
+        // Declarando três variáveis separadamente
+        // Variáveis declaradas sem receber valor
+        // tem o vlor undefined
+        let a
+        let b
+        let c
+
+        // Declarando três variáveis de uma vez só
+        let x, y, z
+
+        let v1 = "Teste"    // Tipo string
+        let v2 = 2.75       // Tipo number
+        let v3 = true       // Tipo boolean
+        let v4 = 70         // Tipo number
+        let v6              // Tipo undefined
+        let v7 = "233"      // Tipo string
+
+        // Mudando o valor de v2
+        v2 = "Batata"       // Tipo string
+
+        // Declarando variáveis com valor e sem valor
+        let q1 = 5, q2 = 7, q3 = "4", res, q4 = -3
+
+        // Operadores aritméticos
+        // Subtração
+        res = q1 - q2       // -2
+        res = q1 - q3       // 1
+        res = q1 - v2       
+        // Falha na conversão de v2 para número porque dentro da string não há número válido
+        // O resultado da operação é NaN (Not a number)
+
+        // Multiplicação
+        res = q1 * q2       // 35
+        res = q1 * q3       // 20, com conversão de q3
+        res = q1 * v2       // NaN
+
+        // Divisão
+        res = q1 / q2       // 0.7142857143
+        res = q1 / q3       // 1.25
+        res = q1 / v2       // NaN
+
+        // Adição
+        res = q1 + q2       // 12
+
+        // Com sinal de +, havendo pelo menos uma string, haverá conversão dos demais termos e todos serão concatenados
+        res = q1 + q3       // 54
+        res = q1 + v2       // 5batata
+
+        // Forçando soma de number com string que contém valor numérico inválido
+        res = q1 + Number(q3)   // 9 Usando Number()
+        res = q1 + parseInt(q3) // 9 Usando parseInt()
+
+        // Potenciação
+        res = q1 ** q2      // 78125
+        res = q1 ** q3      // 625
+        res = q1 ** v2      //  NaN
+        res = q1 ** q4      
+
+        alert(res)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
