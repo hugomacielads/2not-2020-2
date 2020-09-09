@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
+    <title>Calculadora_SwitchCase</title>
     <script>
         // 'use strict' impede que variáveis sejam declaradas
         // sem o uso de let, var ou const
@@ -37,30 +37,42 @@
        if(isNaN(num1) || isNaN(num2)) {
            alert('ERRO: pelo menos um dos números informados é inválido.')
        }
-       else if (oper == '+') {
-           res = num1 + num2
-       }
-       else if (oper == '-') {
-           res = num1 - num2 
-       }
-       else if (oper == '*' || oper == 'X' || oper == 'x') {
-           res = num1 * num2
-       }
-       else if (oper == '/' || oper == ':') {
-           res = num1 / num2
-       }
        else {
-           alert('ERRO: o operador informado é inválido.')
-           temErro = true
-       }
+           switch(oper) {
+               case '+':
+                   res = num1 + num2
+                   break
+
+                case '-':
+                    res = num1 - num2
+                    break
+
+                case '*':   // case vazio
+                case 'X':   // case vazio
+                case 'x':
+                    res = num1 * num2
+                    break
+
+                case '/':   // case vazio
+                case ':':
+                    res = num1 / num2
+                    break
+
+                default:
+                    alert('ERRO: Operador informado é inválido')
+                    temErro = true
+                
+           }
+       } 
+
 
        if(!temErro) {
         //   document.write('O resultado da operação: ' + num1 + ' ' + oper + ' ' + 
-        //     num2 + ' é igual a ' + res + '-')
+        //   num2 + ' é igual a ' + res + '-')
        
 
         // Usando string template (que usa acentos graves - backtick)
-        document.write(`O resultado da operação: ${num1} ${oper} ${num2} é igual a ${res}.`)
+        document.write(`O resultado da operação:<br> ${num1} ${oper} ${num2} é igual a ${res}.`)
        }
 
     </script>
