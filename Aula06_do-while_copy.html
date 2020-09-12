@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício par ou ímpar</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+
+        /*
+            Características do loop do.while
+            1) Local do teste: no final
+            2) Garantia de execução: 1 (um)
+            3) Número de repetições: Indeterminado    
+        */
+
+        let soma = 0
+        let num 
+
+        do {
+            num = Number(prompt('Informe um número a ser somando (ou 0 para o resultado): '))
+
+             if(!isNaN(num)) {
+                soma += num
+            }
+
+        } while(num != 0)
+
+        document.write(`A soma dos números informados é ${soma}.`)
+       
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
