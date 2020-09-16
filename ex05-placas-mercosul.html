@@ -38,6 +38,45 @@
             ao dígito informado.
         */
 
+       
+       let digito
+       do {
+           digito = parseInt(prompt('Informe o segundo número da placa do carro: (de 0 a 9):'))
+       } while(isNaN(digito) || digito < 0 || digito > 9)
+       
+        switch(digito) {
+            case 0:
+                alert('Letra: A')
+                break
+            case 1:
+                alert('Letra: B')
+                break
+            case 2:
+                alert('Letra: C')
+                break
+            case 3:
+                alert('Letra: D')
+                break
+            case 4:
+                alert('Letra: E')
+                break
+            case 5:
+                alert('Letra: F')
+                break
+            case 6:
+                alert('Letra: G')
+                break
+            case 7:
+                alert('Letra: H')
+                break
+            case 8:
+                alert('Letra: I')
+                break
+            case 9:
+                alert('Letra: J')
+            
+        }
+
     </script>
 </head>
 <body>
