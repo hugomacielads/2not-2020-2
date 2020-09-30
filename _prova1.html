@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROVA 1 - Hugo Maciel</title>
+     <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+
+        document.write('FRANCANIZAÇÃO DO ESTADO DE SÃO PAULO <br> Lombofaixas no caminho Franca > São Paulo <br>')
+
+        // AMOSTRAGEM DAS LOMBOFAIXAS DURANTE A VIAGEM DE FRANCA ATÉ SÃO PAULO
+
+        for(let km = 400; km >= 1; km--) {
+           if(km % 29 == 0) {
+               document.write(`- O quilômetro ${km} tem uma lobofaixa. <br>`)
+            }
+        }
+
+        //DEMONSTRAGEM DO PONTO TURISTICO FRANCANO NA ESTRADA ATÉ SÃO PAULO
+
+        
+       let ponto_turistico
+       do {
+           ponto_turistico = parseInt(prompt('Informe o segundo número da placa do carro: (de 0 a 9):'))
+       } while(isNaN(ponto_turistico) || digito < 400)
+
+           switch(ponto_turistico) {
+            case '92':
+            case '177':
+            case '291':
+            case '388':
+                alert('uma Mega loja do Magazine Luiza! Vem ser feliz!')
+                break
+
+            case '153':
+            case '356':
+                alert('Um drive-thru dos Calçados Rafarillo')
+                break
+
+            case '187':
+                alert('Um dos Postos de recarga da Viação São José')
+                break
+
+            case '210':
+                alert('A Filial da Padaria Estrela')
+                break
+
+            case '314':
+                alert('A Fábrica do Jubileu do Amendoin, MAÔE')
+                break
+
+            case '367':
+                alert('O Franca AcquaParque Unidade II')
+                break
+
+            default:
+                alert('Vapo, tem nada aqui não. Segue reto a vida toda meu fii! Sóbora')
+                
+           
+       } 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
