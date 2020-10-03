@@ -23,47 +23,45 @@
 
         //DEMONSTRAGEM DO PONTO TURISTICO FRANCANO NA ESTRADA ATÉ SÃO PAULO
 
-        
-       let ponto_turistico
-       do {
-           ponto_turistico = parseInt(prompt('Informe o segundo número da placa do carro: (de 0 a 9):'))
-       } while(isNaN(ponto_turistico) || digito < 400)
+        let quilometro
+        do {
+           quilometro = parseInt(prompt('Informe o quilômetro de 1 á 400:'))
+        } while(isNaN(quilometro) || quilometro < 1 || quilometro > 400 )
 
-           switch(ponto_turistico) {
-            case '92':
-            case '177':
-            case '291':
-            case '388':
-                alert('uma Mega loja do Magazine Luiza! Vem ser feliz!')
+        let msg
+        switch(quilometro) {
+            case 92:
+            case 177:
+            case 291:
+            case 388:
+                msg = 'uma Mega loja do Magazine Luiza! Vem ser feliz!'
                 break
 
-            case '153':
-            case '356':
-                alert('Um drive-thru dos Calçados Rafarillo')
+            case 153:
+            case 356:
+                msg = 'um drive-thru dos Calçados Rafarillo'
                 break
 
-            case '187':
-                alert('Um dos Postos de recarga da Viação São José')
+            case 187:
+                msg = 'um dos Postos de recarga da Viação São José'
                 break
 
-            case '210':
-                alert('A Filial da Padaria Estrela')
+            case 210:
+                msg = 'uma Filial da Padaria Estrela'
                 break
 
-            case '314':
-                alert('A Fábrica do Jubileu do Amendoin, MAÔE')
+            case 314:
+                msg = 'uma Fábrica do Jubileu do Amendoin, MAÔE'
                 break
 
-            case '367':
-                alert('O Franca AcquaParque Unidade II')
+            case 367:
+                msg = 'O Franca AcquaParque Unidade II'
                 break
 
             default:
-                alert('Vapo, tem nada aqui não. Segue reto a vida toda meu fii! Sóbora')
-                
-           
-       } 
-
+                msg = 'Vapo, tem nada aqui não. Segue reto a vida toda meu fii! Sóbora'   
+        } 
+        alert(`Aqui tem ${msg}`)
     </script>
 </head>
 <body>
