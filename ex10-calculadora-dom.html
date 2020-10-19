@@ -38,6 +38,8 @@
             <option>-</option>
             <option>*</option>
             <option>/</option>
+            <option>**</option>
+            <option>%</option>
         </select>
     </div>
 
@@ -107,23 +109,31 @@
         }
         function montarResultado() {
             if(validar()) {
-                let resultado = ''
+                let resultado
 
                 switch(elOperacao.selectedIndex) {
                     case 1:
-                        resultado = elPrimeiroNum + elSegundoNum
+                        resultado = elPrimeiroNum.value + elSegundoNum.value
                         break
 
                     case 2:
-                        resultado = elPrimeiroNum - elSegundoNum
+                        resultado = elPrimeiroNum.value - elSegundoNum.value
                         break
 
                     case 3:
-                        resultado = elPrimeiroNum * elSegundoNum
+                        resultado = elPrimeiroNum.value * elSegundoNum.value
                         break
 
                     case 4:
-                        resultado = elPrimeiroNum / elSegundoNum
+                        resultado = elPrimeiroNum.value / elSegundoNum.value
+                        break
+
+                    case 5:
+                        resultado = elPrimeiroNum.value ** elSegundoNum.value
+                        break
+
+                    case 6:
+                        resultado = elPrimeiroNum.value % elSegundoNum.value
                         break
                 }
 
