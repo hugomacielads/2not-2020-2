@@ -41,6 +41,14 @@
             <option>**</option>
             <option>%</option>
         </select>
+        <ul>
+            <li>Para adição &nbsp; +</li>
+            <li>Para subtração&nbsp; -</li>
+            <li>Para multiplicação &nbsp; *</li> 
+            <li>Para divisão &nbsp; /</li>
+            <li>Para potenciação &nbsp; **</li>
+            <li>Para o resto da divisão &nbsp; %</li> 
+        <br>
     </div>
 
     <div>
@@ -89,13 +97,13 @@
 
             let valido = true
             
-            if(isNaN(elPrimeiroNum.value)) {
-                alert('O primeiro número deve ser informado.')
+            if(isNaN(parseFloat(elPrimeiroNum.value))) {
+                alert('Primeiro número inválido.')
                 elPrimeiroNum.focus() // Coloca o foco no controle
                 valido = false
             }
-            else if(isNaN(elSegundoNum.value)) {
-                alert('O segundo número deve ser informado')
+            else if(isNaN(parseFloat(elSegundoNum.value))) {
+                alert('Segundo número inválido.')
                 elSegundoNum.focus()
                 valido = false
             }
@@ -113,7 +121,7 @@
 
                 switch(elOperacao.selectedIndex) {
                     case 1:
-                        resultado = elPrimeiroNum.value + elSegundoNum.value
+                        resultado = parseFloat(elPrimeiroNum.value) + parseFloat(elSegundoNum.value)
                         break
 
                     case 2:
