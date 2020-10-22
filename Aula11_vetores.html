@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula sobre vetores</title>
+     <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        // Declarando e inicializando vetores com elementos
+        let carros = ['Fusca', 'Passat', 'Corcel']
+        let cores = ['verde', 'vermelho', 'azul', 'preto']
+        let numeros = Array(2, 3, 5, 7, 11, 13, 15)
+
+        // Vetor de tipos misturados
+        let mistura = ['João das Couves', 63, false, null, undefined]
+
+        let frutas = []
+
+        /* push(): insere novos elementos no FINAL do vetor */
+        frutas.push('Laranja')
+        frutas.push('Melancia')
+        frutas.push('Maçã', 'Limão', 'Pêra') // Pode inserir mais de um elemento de uma vez
+        console.log(frutas)
+
+        /* unshift(): insere novos elementos no início do vetor */
+        frutas.unshift('Jaboticaba')
+        frutas.unshift('Amora')
+
+        /* pop(): retira UM elemento do final do vetor */
+        let retirado = frutas.pop() // Retira e coloca em uma variável
+        frutas.pop()                // Retira e a variável se perde
+        console.log('Retirado:', retirado)
+
+        /* shift(): retira um elemento do INÍCIO do vetor */
+        frutas.shift()              // Retira e perde
+        retirado = frutas.shift()   // Retira e coloca em uma variável
+        console.log('Retirado', retirado)
+
+        /* splice(): insere elementos em uma posição específica do vetor
+            Parâmetros:
+            1º: A posição onde será feita a inserção
+            2º: Quantos elementos serão APAGADOS (para inserções, deve ser zero (0))
+            3º em diante: Os elementos que serão inseridos
+        */
+        frutas.splice(2, 0, 'Morango')
+        frutas.splice(1, 0, 'Jaca', 'Ameixa')
+
+        /* Usando o splice() para fazer substituído na posição 3 */
+        frutas.splice(3, 1, 'Manga') // 1 elemento será apagado e substituído na posição 3
+
+        /* splice(): também retira elementos de uma posição específica do vetor
+            Parâmetros:
+            1º: posição onde será retirada
+            2º: quantidade de elementos que serão removidos (> 0)
+        */
+        retirado = frutas.splice(1, 1)
+        console.log('Retirado', retirado)
+
+        // Colocando novos elementos para massa de teste
+        frutas.push('Framboesa', 'Caju', 'Maracujá', 'Mexerica')
+
+        // Retirando vários elementos de uma vez
+        retirado = frutas.splice(4, 3)  //A partir da posição 4, retire 3 elementos
+        console.log('Retirado:', retirado)
+
+        // Retirando o último elemento do vetor
+        frutas.splice(-1, 1) // Posição negativa conta as posições de trás para frente
+
+        /* length: retorna o número de elementos do valor */
+        console.log('Número de elementos: ', frutas.length)
+
+        /* IndexOf: retorna a posição da primeira ocorrência do valor especificado ou -1 caso o valor não exista no vetor */
+        console.log('Ameixa: ', frutas.indexOf('Ameixa'))
+        console.log('Melão: ', frutas.indexOf('Melão'))
+        console.log('Morango: ', frutas.indexOf('Morango'))
+
+        if(frutas.indexOf('Jambo') >= 0) {
+            console.log('Existe')
+        }
+        else {
+            console.log('Não existe')
+        }
+
+        /* includes(): retorna se o valor da busca existe (true) ou não existe (false) dentro do vetor */
+        console.log('Ameixa: ', frutas.includes('Ameixa'))
+        console.log('Melão: ', frutas.includes('Melão'))
+        console.log('Morango: ', frutas.includes('Morango'))
+
+        if(frutas.includes('Jambo') >= 0) {
+            console.log('Existe')
+        }
+        else {
+            console.log('Não existe')
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

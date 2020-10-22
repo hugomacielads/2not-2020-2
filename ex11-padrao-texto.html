@@ -3,7 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Padrão texto Hugo Maciel</title>
+    <style>
+        label {
+            display: block;
+        }
+        fieldset label {
+            display: inline;
+        }
+        fieldset {
+            border: 1px solid lightgray;
+            border-radius: 8px;
+            width: 50%;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Padrão texto - Hugo Maciel</h1>
+    <div>
+      <label>Insira o caractere</label>
+      <input type="text" id="caractere" placeholder="caractere" maxlength="1">
+    </div>
+    <div>
+      <label>Insira o nº de vezes que o padrão irá ser mostrado</label>
+      <input type="text" id="numero" placeholder="nº de 1 a 100">
+    </div>
+    <div>
+        <button id="gerar">Gerar Padrão</button>
+    </div> 
+    <div id="padrao"></div>
+
+
     <script>
         // 'use strict' impede que variáveis sejam declaradas
         // sem o uso de let, var ou const
@@ -44,6 +78,40 @@
             ***********
         */
 
+        const elCarac = document.getElementById('caractere')
+        const elNumero = document.getElementById('numero')
+        const elBotao = document.getElementById('gerar')
+        const elPadrao = document.getElementById('padrao')
+
+        function validar() {
+            let valido = true
+
+            if (elCarac.value.trim() == '') {
+                alert('Insira um caractere')
+                valido = false
+            }
+            else if (elNumero.value < 1 || elNumero.value > 100 || isNaN(elNumero.value)) {
+                alert('Número inválido. Insira um valor de 1 a 100')
+                valido = false
+            }
+            return valido
+        }
+
+        function gerar_padrao() {
+            if (validar()) {         
+                let string_padrao = ''
+                let i = 1
+
+                do {
+                    string_padrao = string_padrao + '<br>' + elCarac.value.repeat(i)
+                    i = i + 1
+                } while (i <= parseInt(elNumero.value))
+
+            elPadrao.innerHTML = string_padrao
+
+            }
+        }
+        elBotao.addEventListener('click', gerar_padrao)  
     </script>
 
 <!--[if gte mso 9]><xml>
