@@ -98,6 +98,25 @@
             console.log('Não existe')
         }
 
+        console.log(frutas)
+        alert(frutas)
+        document.write(frutas)
+
+        /* slice(): "fatia um vetor, gerando um outro vetor apenas com o pedaço desejado
+            Parâmetros:
+            1º: posição inicial (incluída)
+            2º: posição final   (NÃO INCLUÍDA)
+        */
+        let parte = frutas.slice(1, 4)
+        console.log(frutas)
+        console.log(parte)
+
+        // Quando chamado com apenas um parâmetro a fatia inclui daquela posição até o final do vetor
+        let outraParte = frutas.slice(3)
+        console.log(outraParte)
+        
+
+
     </script>
 </head>
 <body>
