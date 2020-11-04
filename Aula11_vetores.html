@@ -27,7 +27,7 @@
         frutas.push('Maçã', 'Limão', 'Pêra') // Pode inserir mais de um elemento de uma vez
         console.log(frutas)
 
-        /* unshift(): insere novos elementos no início do vetor */
+        /* unshift(): insere novos elementos no INÍCIO do vetor */
         frutas.unshift('Jaboticaba')
         frutas.unshift('Amora')
 
@@ -114,7 +114,63 @@
         // Quando chamado com apenas um parâmetro a fatia inclui daquela posição até o final do vetor
         let outraParte = frutas.slice(3)
         console.log(outraParte)
+
+        // Acessando posições do vetor
+        // A fruta que está na terceira posição
+        console.log(frutas[2])
+
+        // A primeira fruta
+        console.log(frutas[0])
+
+        // A última fruta
+        console.log(frutas[frutas.length - 1])  
+
+        console.log('-----------------------------')
+
+        // Percurso na ordem crescente
+        let i
+        for(i = 0; i < frutas.length; i++) {
+            console.log(frutas[i])
+        }
+        console.log('Valor final de i:', i)
         
+        console.log('------------------------------')
+
+        // Percurso na ordem decrescente
+        for(let i = frutas.length - 1; i >= 0, i--) {
+            console.log(frutas)
+        }
+
+        console.log('------------------------------')
+
+        /* PERCURSO USANDO O LOOP for..of
+            1) SEMPRE percorre TODOS os elementos, do primeiro ao último
+            2) NÃO é possível usá-lo para percorrer na ordem decrescente
+        */
+        // frutas (plural) é o vetor
+        // fruta (singular) é uma variável que, a cada interação do loop,
+        // receberá o valor de um dos elementos no vetor, na ordem.
+        // Essa variável pode ter QUALQUER nome válido
+        for(let fruta of frutas) {
+            console.log(fruta)
+        }
+
+        console.log('forEach: ---------------------')
+
+        /* PERCURSO USANDO forEach()
+            forEach() é uma FUNÇÃO que todos os vetores têm
+            e que espera, como parâmetro, outra FUNÇÃO que 
+            recebe um outro parâmetro, que contém cada um dos
+            elementos do vetor
+        */
+
+        frutas.forEach(function(x) {
+            console.log(x)
+        })
+
+
+
+
 
 
     </script>
